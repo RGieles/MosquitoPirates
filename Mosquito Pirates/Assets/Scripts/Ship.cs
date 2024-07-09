@@ -38,19 +38,21 @@ public class Ship : MonoBehaviour
 
     void Update()
     {
+         Vector3 targetDirection = target.position - transform.position;
+
+        // The step size is equal to speed times frame time.
+        float singleStep = (accel / 100) * Time.deltaTime;
+
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        // Calculate a rotation a step closer to the target and applies rotation to this object
+        transform.rotation = Quaternion.LookRotation(newDirection);
+
         if(!stopMovement)
         {
             currentSpeed = baseSpeed * accel;
             currentTurnSpeed = baseTurnSpeed - decel;
-
-             Vector3 targetDirection = target.position - transform.position;
-
-            // The step size is equal to speed times frame time.
-            float singleStep = currentSpeed * Time.deltaTime;
-
-            // Rotate the forward vector towards the target direction by one step
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
 
             thisBody.AddForce(transform.forward * currentSpeed);
 
