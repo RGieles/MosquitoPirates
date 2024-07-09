@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0ecdfec1f03881429f8de3d37d20c07
+guid: 39a37aec2a6b0b24794ef9b855e7cb6c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Bellerose
+  - Lugrasimo
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
