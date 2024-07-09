@@ -1486,9 +1486,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9218260035262976065, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: -9017219231735809496, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
     - target: {fileID: -8679921383154817045, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.44
+      value: 34.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1496,7 +1504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.89
+      value: 43.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1530,10 +1538,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 26817a4fb666276479437a65f8e288e9, type: 2}
+    - target: {fileID: -6667885437152996002, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: -5287985615707340822, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Mouth
+      objectReference: {fileID: 0}
+    - target: {fileID: -5268206082733709682, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Neck
+      objectReference: {fileID: 0}
+    - target: {fileID: -5148699209225908661, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Legs
+      objectReference: {fileID: 0}
     - target: {fileID: -4638702043871927091, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa854d2315a7a3046b1c3b63899310b1, type: 2}
+    - target: {fileID: -1936747308070684184, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: -1919534400885775189, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -1153700810866386655, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1542,6 +1574,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa854d2315a7a3046b1c3b63899310b1, type: 2}
+    - target: {fileID: -599778495447948484, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Feet
+      objectReference: {fileID: 0}
+    - target: {fileID: -313744969131285024, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 535938504682417443, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 745937651480858873, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
     - target: {fileID: 919132149155446097, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Name
       value: Victim
@@ -1550,18 +1598,58 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1777875480170400413, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947363488968490839, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: 3029735648974416991, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
     - target: {fileID: 3473064795615549585, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa854d2315a7a3046b1c3b63899310b1, type: 2}
+    - target: {fileID: 4721439888049023843, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Ankle
+      objectReference: {fileID: 0}
     - target: {fileID: 4747865514597097150, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa854d2315a7a3046b1c3b63899310b1, type: 2}
+    - target: {fileID: 4835161680357835823, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: 4907534743592228101, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Nose
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178847490314991396, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
     - target: {fileID: 6496702714491785522, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa854d2315a7a3046b1c3b63899310b1, type: 2}
+    - target: {fileID: 7145466725054345982, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
+    - target: {fileID: 8312775627618626511, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Name
+      value: Hotzone_Hand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076104667391540703, guid: 13dd72482125a2443bb8bf22fb78f320, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b668217c37f643b813fefb5d853e6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
