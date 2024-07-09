@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetupLane : MonoBehaviour
+public class PickupArea : MonoBehaviour
 {
     public GameObject pickupPrefab;
-    public int laneLength;
     public float pickupAmount;
-    public float turnDegree;
 
     public int randomPlacementFactor;
-    public int safeZone;
 
     void Start()
     {
@@ -18,8 +15,9 @@ public class SetupLane : MonoBehaviour
         {
             int tempRandomX = Random.Range(-randomPlacementFactor, randomPlacementFactor);
             int tempRandomY = Random.Range(-randomPlacementFactor, randomPlacementFactor);
+            int tempRandomZ = Random.Range(-randomPlacementFactor, randomPlacementFactor);
 
-            GameObject newPickUp = Instantiate(pickupPrefab, new Vector3((turnDegree * i) + tempRandomX,tempRandomY,safeZone + i*laneLength), Quaternion.identity) as GameObject;
+            GameObject newPickUp = Instantiate(pickupPrefab, new Vector3(transform.position.x - tempRandomX,transform.position.y - tempRandomY, transform.position.z - tempRandomZ), Quaternion.identity) as GameObject;
         }
     }
 }

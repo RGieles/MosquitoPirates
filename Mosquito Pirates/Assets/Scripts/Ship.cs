@@ -15,15 +15,12 @@ public class Ship : MonoBehaviour
     public float accel;
 
     public float baseTurnSpeed;
-    public float currentTurnSpeed;
+     float currentTurnSpeed;
     public float decel;
 
-    public Vector3 moveAngle;
 
     public bool stopMovement = false;
     Rigidbody thisBody;
-
-    public Transform target;
 
     void Start()
     {
@@ -43,7 +40,7 @@ public class Ship : MonoBehaviour
             currentSpeed = baseSpeed * accel;
             currentTurnSpeed = baseTurnSpeed - decel;
 
-            thisBody.AddForce(transform.forward * currentSpeed);
+           // thisBody.AddForce(transform.forward * currentSpeed);
 
             if(Input.GetKey(KeyCode.A))
             {
