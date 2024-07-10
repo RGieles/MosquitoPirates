@@ -11,9 +11,11 @@ public class GameOverOnCollision : MonoBehaviour
         // Check if the collision is with the object tagged as "Ship"
         if (collision.gameObject.CompareTag("Ship"))
         {
+            GameObject.Find("DeathSound").GetComponent<AudioSource>().Play();
             // Activate the game-over canvas
             if (loseCanvas != null)
             {
+                Time.timeScale = 0;
                 loseCanvas.SetActive(true);
             }
             else
@@ -21,26 +23,7 @@ public class GameOverOnCollision : MonoBehaviour
                 Debug.LogError("Lose canvas is not assigned in the inspector.");
             }
 
-            // Disable the Ship script to stop player movement
-            Ship shipScript = collision.gameObject.GetComponent<Ship>();
-            if (shipScript != null)
-            {
-                shipScript.enabled = false;
-            }
-            else
-            {
-                Debug.LogError("Ship script is not found on the object tagged as 'Ship'.");
-            }
 
-            // Stop the Cinemachine Dolly Cart movement
-            if (dollyCart != null)
-            {
-                dollyCart.m_Speed = 0;
-            }
-            else
-            {
-                Debug.LogError("Dolly cart is not assigned in the inspector.");
-            }
         }
     }
 }

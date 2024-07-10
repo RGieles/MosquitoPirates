@@ -23,6 +23,7 @@ public class StartButtonScript : MonoBehaviour
 
     void OnStartButtonClick()
     {
+        Time.timeScale = 1;
         // Load the specified scene
         SceneManager.LoadScene(sceneToLoad);
     }

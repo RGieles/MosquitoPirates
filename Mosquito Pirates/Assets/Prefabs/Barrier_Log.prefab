@@ -91,7 +91,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.49
+  m_Radius: 0.4
   m_Height: 6.5
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a797fcef4da29e44bba9fab713d3538f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseCanvas: {fileID: 0}
+  dollyCart: {fileID: 0}

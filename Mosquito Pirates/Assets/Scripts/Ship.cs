@@ -18,9 +18,12 @@ public class Ship : MonoBehaviour
      float currentTurnSpeed;
     public float decel;
 
+    public GameObject endScreen; 
 
     public bool stopMovement = false;
     Rigidbody thisBody;
+
+    public AudioSource deathSound;
 
     void Start()
     {
@@ -69,12 +72,15 @@ public class Ship : MonoBehaviour
         //Ew, tags
         if(coll.gameObject.tag == "BodyPart")
         {
+            deathSound.Play();
             stopMovement = true;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
 
             int multiplier = coll.gameObject.GetComponent<BodyPart>().GetMultiplier();
             score *= multiplier;
             scoreLabel.text = "" + score;
+            Time.timeScale = 0;
+            endScreen.SetActive(true);
         }
     }
 
@@ -82,7 +88,7 @@ public class Ship : MonoBehaviour
     {
         score += perPickupScore;
         Destroy(coll.gameObject);
-
+        
         scoreLabel.text = "" + score;
     }
 }
