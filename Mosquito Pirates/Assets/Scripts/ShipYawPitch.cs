@@ -1,49 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipYawPitch : MonoBehaviour
 {
-    public float yawSpeed = 100f;  // Speed of yaw (left/right rotation)
-    public float pitchSpeed = 50f; // Speed of pitch (up/down rotation)
-    public float maxYawAngle = 10f; // Maximum yaw angle
-    public float maxPitchAngle = 10f; // Maximum pitch angle
+    public float rollSpeed = 10f;
+    public float pitchSpeed = 10f;
+    public float maxRoll = 30f; // Maximum roll in degrees
+    public float maxPitch = 30f; // Maximum pitch in degrees
+    public float levelingSpeed = 2f; // Speed at which the ship levels out
+
+    private float currentRoll = 0f;
+    private float currentPitch = 0f;
 
     void Update()
     {
-        float yaw = 0f;
-        float pitch = 0f;
+        // Get input for roll and pitch
+        float rollInput = Input.GetKey(KeyCode.A) ? 1f : Input.GetKey(KeyCode.D) ? -1f : 0f;
+        float pitchInput = Input.GetKey(KeyCode.S) ? 1f : Input.GetKey(KeyCode.W) ? -1f : 0f;
 
-        if (Input.GetKey(KeyCode.A))
+        // Calculate new roll and pitch values
+        currentRoll += rollInput * rollSpeed * Time.deltaTime;
+        currentPitch += pitchInput * pitchSpeed * Time.deltaTime;
+
+        // Clamp the roll and pitch values to their maximums
+        currentRoll = Mathf.Clamp(currentRoll, -maxRoll, maxRoll);
+        currentPitch = Mathf.Clamp(currentPitch, -maxPitch, maxPitch);
+
+        // Level out the ship when there is no input
+        if (rollInput == 0)
         {
-            yaw = -yawSpeed * Time.deltaTime;
+            currentRoll = Mathf.Lerp(currentRoll, 0f, levelingSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (pitchInput == 0)
         {
-            yaw = yawSpeed * Time.deltaTime;
+            currentPitch = Mathf.Lerp(currentPitch, 0f, levelingSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            pitch = -pitchSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            pitch = pitchSpeed * Time.deltaTime;
-        }
-
-        Vector3 currentRotation = transform.localEulerAngles;
-        float newYaw = Mathf.Clamp(NormalizeAngle(currentRotation.y + yaw), -maxYawAngle, maxYawAngle);
-        float newPitch = Mathf.Clamp(NormalizeAngle(currentRotation.x + pitch), -maxPitchAngle, maxPitchAngle);
-
-        transform.localEulerAngles = new Vector3(newPitch, newYaw, currentRotation.z);
-    }
-
-    float NormalizeAngle(float angle)
-    {
-        angle = angle % 360;
-        if (angle > 180)
-            angle -= 360;
-        else if (angle < -180)
-            angle += 360;
-        return angle;
+        // Apply the rotation to the ship
+        transform.localRotation = Quaternion.Euler(currentPitch, 0f, currentRoll);
     }
 }
