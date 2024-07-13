@@ -552,7 +552,8 @@ PrefabInstance:
       value: Ship
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8821623529969584324, guid: a1dfa9671351ed64fa45f0d7cd268252, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1dfa9671351ed64fa45f0d7cd268252, type: 3}
       insertIndex: 0
@@ -609,9 +610,7 @@ MonoBehaviour:
   perPickupScore: 5
   scoreLabel: {fileID: 0}
   baseSpeed: 0
-  accel: 1
   baseTurnSpeed: 0
-  decel: 1
   endScreen: {fileID: 0}
   stopMovement: 0
   deathSound: {fileID: 0}
